@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 2rem;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    list-style: none;
+}
+
+:root { /*dark mode*/
+    --color-bg: rgb(39, 40, 69);
+    --color-top-bar: rgb(27, 28, 47);
+    --color-text-tb: rgb(228, 240, 212);
+    --color-text-line: rgb(249, 183, 222);
+}
+
+.clare-mode {
+    --color-bg: rgb(199, 213, 232);
+    --color-top-bar: rgb(57, 61, 141);
+    --color-text-tb: rgb(199, 213, 232);
+}
+
+header {
+    background: var(--color-top-bar);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 1.25rem 3.125rem;
+    display: flex;
+    z-index: 3;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    font-size: 1.2rem;
+    color: var(--color-text-tb);
+    display: flex;
+    gap: 2.5rem;
+    user-select: none;
+}
+
+header nav ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 0.3125rem 0;
+    scale: 1;
+    transition: scale 0.5s ease;
+}
+
+header nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0.1rem;
+    background-color: var();
+}
+
+.mode-page-btn {
+    color: var(--color-text-tb);
+    font-size: 1.2rem;
+    font-weight: 2rem;
+    background: none;
+    border: none;
+    padding: none;
+    cursor: pointer;
+}
+
+body {
+    background: var(--color-bg);
+}
