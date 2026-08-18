@@ -11,67 +11,66 @@
 }
 
 :root { /*dark mode*/
-    --color-bg: rgb(39, 40, 69);
+
+    /*COLORS*/
+
+    --color-main: linear-gradient(90deg,rgba(39, 40, 69, 1) 0%, rgba(11, 8, 20, 1) 100%);
     --color-top-bar: rgb(27, 28, 47);
-    --color-text-tb: rgb(228, 240, 212);
-    --color-text-line: rgb(249, 183, 222);
+    --color-dark-clare-btn: rgb(228, 240, 212);
+
+    /*COLORS CONSTANTS*/
+
+    --color-text: rgb(228, 240, 212);
+    --shadow-text: rgb(33, 27, 54);
+
+    /*NUMBERS*/
+
+    --mid-time: 1s;
+
 }
 
 .clare-mode {
-    --color-bg: rgb(199, 213, 232);
-    --color-top-bar: rgb(57, 61, 141);
-    --color-text-tb: rgb(199, 213, 232);
+    --color-main: linear-gradient(90deg,rgba(228, 240, 212, 1) 0%, rgba(196, 141, 132, 1) 100%);
+    --color-top-bar: rgb(39, 40, 69);
+    --color-dark-clare-btn: rgb(39, 40, 69);
 }
 
 header {
     background: var(--color-top-bar);
-    position: fixed;
     width: 100%;
-    top: 0;
-    padding: 1.25rem 3.125rem;
-    display: flex;
+    padding: 16px;
+    text-align: center;
     z-index: 3;
-    justify-content: space-between;
-    align-items: center;
+    transition: background var(--mid-time);
 }
 
-header nav ul {
-    font-size: 1.2rem;
-    color: var(--color-text-tb);
-    display: flex;
-    gap: 2.5rem;
+h1 b {
+    text-shadow: 0 0 1.25rem var(--color-text);
     user-select: none;
 }
 
-header nav ul li {
-    cursor: pointer;
-    position: relative;
-    padding: 0.3125rem 0;
-    scale: 1;
-    transition: scale 0.5s ease;
-}
-
-header nav ul li::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 0;
-    height: 0.1rem;
-    background-color: var();
+h1, h2, h3 {
+    color: var(--color-text);
+    text-shadow: 0 0.5rem 0.2rem var(--shadow-text);
 }
 
 .mode-page-btn {
-    color: var(--color-text-tb);
-    font-size: 1.2rem;
-    font-weight: 2rem;
-    background: none;
-    border: none;
-    padding: none;
+    background: rgba(118, 117, 117, 0.381);
+    position: absolute;
+    left: 93%;
+    top: 85%;
+    border-radius: 50%;
+    padding: 1.2rem;
+    z-index: 3;
     cursor: pointer;
 }
 
+.mode-page-btn svg {
+    fill: var(--color-dark-clare-btn);
+    transition: fill var(--mid-time);
+}
+
 body {
-    background: var(--color-bg);
+    background: var(--color-main);
+    transition: background var(--mid-time);
 }
